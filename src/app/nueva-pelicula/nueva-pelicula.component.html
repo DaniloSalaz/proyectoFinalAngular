@@ -1,0 +1,22 @@
+<mat-card class="example-form">
+    <form (ngSubmit)="onSubmit()" [formGroup]="peliculaForm">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Título" formControlName="titulo" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="sinopsis" formControlName="sinopsis" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="clasificacion" formControlName="clasificacion" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-select placeholder="estado" formControlName="estado">
+                <mat-option value="false">false</mat-option>
+                <mat-option value="true">true</mat-option>
+              </mat-select>
+        </mat-form-field>
+        <mat-card-actions>
+        <button class="md-toolbar-tools" mat-raised-button color="primary" type="submit">Guardar</button>
+        </mat-card-actions>
+    </form>
+</mat-card>
