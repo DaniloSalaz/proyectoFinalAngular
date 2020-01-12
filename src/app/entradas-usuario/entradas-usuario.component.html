@@ -1,0 +1,28 @@
+<div class="container-usuario-compra " fxLayout="column" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
+    <div>
+        <mat-card class="card-usuario-compra">
+            <img mat-card-image  src="./assets/usuario.png" alt="Photo user">
+        </mat-card>
+    </div>
+    <div>
+        <mat-list role="list">
+            <mat-list-item  style="cursor: pointer"  [style.background]= "'#e6eae9'" [@efectover]="efecto" (mouseover)="efectoOver()" (mouseout)="efectoOut()">
+                <mat-icon mat-list-icon >local_activity</mat-icon>                    
+                 <h4 mat-line>Advenges end Game </h4>
+                 <p mat-line>10/01/2019</p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item [@efectover]="efecto2" (mouseover)="efectoOver2()" (mouseout)="efectoOut2()">
+                <mat-icon mat-list-icon>local_activity</mat-icon>                    
+                 <h4 mat-line>Advenges end Game </h4>
+                 <p mat-line>10/01/2019</p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item [@efectover]="efecto3" (mouseover)="efectoOver3()" (mouseout)="efectoOut3()">
+                <img mat-list-avatar src="./assets/avengers_end.jpg" >                  
+                 <h4 mat-line>Advenges end Game </h4>
+                 <p mat-line>10/01/2019</p>
+            </mat-list-item>
+          </mat-list>          
+    </div>
+</div>

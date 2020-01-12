@@ -1,25 +1,24 @@
-<mat-card class="example-card">
-    <img mat-card-image class="img-card" src="./assets/avengers_end.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-        <mat-list>
-            <mat-list-item>
-                <mat-chip-list >
-                    <mat-chip>14:30</mat-chip>
-                    <mat-chip>17:30</mat-chip>
-                    <mat-chip>20:30</mat-chip>
-                </mat-chip-list>
-            </mat-list-item>
-            <mat-list-item>
-                <mat-icon color="primary"> start</mat-icon> Avengers End Game
-            </mat-list-item>
-        </mat-list>
-    </mat-card-content>
-    <mat-card-actions>
-        
-        <div dir="rtl" fxLayoutGap="20px">
-            <button class="md-toolbar-tools" mat-raised-button color="primary">Comprar</button>
-            <button class="md-toolbar-tools" mat-raised-button color="secundary">Comentar</button>
-        </div>
-        
-    </mat-card-actions>
-</mat-card>
+<div *ngIf="vPeliculas" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
+    <div *ngFor="let elemento of vPeliculas">
+        <mat-card class="example-card"  [@efectover]="getEfecto(elemento.id)" (mouseover)="efectoOver(elemento.id)" (mouseout)="efectoOut(elemento.id)">
+            <img mat-card-image src="{{'./assets/' + elemento.imgPath}}" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item>
+                        <mat-icon color="primary">start</mat-icon>{{elemento.titulo}}
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+    
+            <mat-card-actions>
+    
+                <div fxLayout="row" fxLayoutAlign="center">
+                    <button class="md-toolbar-tools" mat-raised-button color="secundary" (click)="nuevaCritica(elemento)">Comentar</button>
+                    <button class="md-toolbar-tools" mat-raised-button color="primary">Comprar</button>
+                </div>
+    
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    
+</div>

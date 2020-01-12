@@ -4,10 +4,13 @@
             <input matInput placeholder="Título" formControlName="titulo" value="">
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="sinopsis" formControlName="sinopsis" value="">
+            <textarea matInput placeholder="sinopsis" formControlName="sinopsis"></textarea>
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <input matInput placeholder="clasificacion" formControlName="clasificacion" value="">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Imagen" formControlName="imgPath" value="">
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-select placeholder="estado" formControlName="estado">
@@ -16,7 +19,9 @@
               </mat-select>
         </mat-form-field>
         <mat-card-actions>
-        <button class="md-toolbar-tools" mat-raised-button color="primary" type="submit">Guardar</button>
+            <div fxLayout="row" fxLayoutAlign="end" >
+                <button class="md-toolbar-tools" mat-raised-button color="primary" type="submit">Guardar</button>
+            </div>
         </mat-card-actions>
     </form>
 </mat-card>
