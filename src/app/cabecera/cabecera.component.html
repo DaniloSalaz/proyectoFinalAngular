@@ -1,7 +1,17 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <img  class="img_logo" src="./assets/logo_multicines.png" alt="Photo of a Shiba Inu">
-        <span class="example-spacer"></span>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">account_circle</mat-icon>
-      </mat-toolbar-row>
+  <mat-toolbar-row>
+    <img class="img_logo" src="./assets/logo_multicines.png" routerLink="/" alt="Photo of a Shiba Inu">
+    <div class="separado"> <button mat-raised-button routerLinkActive="active" (click)="openDialog()">Cartelera</button>
+    </div>
+
+    <span class="example-spacer"></span> <button mat-raised-button routerLink="/cartelera"
+      routerLinkActive="active">Cartelera</button>
+
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">account_circle</mat-icon>
+
+    <!-- <button>Cartelera</button> -->
+
+
+
+  </mat-toolbar-row>
 </mat-toolbar>

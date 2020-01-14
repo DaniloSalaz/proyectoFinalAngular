@@ -6,10 +6,10 @@
 </div> -->
 
 
-<h1 mat-dialog-title>Selecciona la provincia</h1>
+<h1 mat-dialog-title>Selecciona el cine</h1>
 
 <mat-form-field>
-  <mat-label>Provincia</mat-label>
+  <mat-label>Cines</mat-label>
   <!-- <mat-select>
     <mat-option *ngFor="let prov of provincias" [(value)]="selected" value="prov.nombre">
       {{prov.nombre}}
@@ -19,10 +19,10 @@
     <option *ngFor="let p of provincias" [value]="p.nombre">{{p.nombre}}</option>
   </select> -->
   <mat-select [(value)]="selected" (selectionChange)="onChangeSelect(selected)">
-    <mat-option *ngFor="let option of provincias" value="{{ option.nombre }}">
-      {{ option.nombre }}
+    <mat-option *ngFor="let option of cines" value="{{ option.provincia }}">
+      {{ option.provincia }}
     </mat-option>
   </mat-select>
 
 </mat-form-field>
-<p>Provincia escogida: {{selected}}</p>
+<p>Cine escogido: {{selected}}</p>
